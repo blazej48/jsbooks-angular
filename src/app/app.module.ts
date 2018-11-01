@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { FilterComponent } from './filter/filter.component';
 import { BookListComponent } from './book-list/book-list.component';
 import { BookListItemComponent } from './book-list/book-list-item/book-list-item.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { BookListItemComponent } from './book-list/book-list-item/book-list-item
     BookListItemComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
