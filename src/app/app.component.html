@@ -1,2 +1,13 @@
-<app-filter [books]="initBooks" (filtered)="books = $event"></app-filter>
-<app-book-list [books]="books"></app-book-list>
+<div class="title-container">
+  <h1 class="title">
+    <span class="title__square"></span>
+    <span class="title__text">JS’owe książki</span>
+  </h1>
+</div>
+<div>
+  <div class="divider divider--dotted"></div>
+</div>
+<div class="main-container">
+  <app-filter [books]="initBooks" (filtered)="books = $event"></app-filter>
+  <app-book-list [books]="books"></app-book-list>
+</div>

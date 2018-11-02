@@ -1,5 +1,6 @@
-<div data-order class="list-item__number"></div>
-<div class="list-item__cover"><img height="236" [src]=book.cover.small></div>
+<div class="list-item">
+<div data-order class="list-item__number">{{number}}</div>
+<div class="list-item__cover"><img height="236" (click)="openModal()" [src]=book.cover.small></div>
 <div class="list-item__content">
   <div class="list-item__header text text--big text--heavy">{{book.title}}</div>
   <div class="list-item__separator" ></div>
@@ -16,4 +17,5 @@
     <div class="row__field-50 text--to-right">Link:</div>
     <a class="row__field-50 text--to-left text--link" [href]=book.link>shop</a>
   </div>
+</div>
 </div>
