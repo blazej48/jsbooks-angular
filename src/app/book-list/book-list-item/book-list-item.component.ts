@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Book} from '../../../models/Book';
+import {Book} from '../../models/Book';
 import {ModalService} from '../../modal.service';
 
 @Component({

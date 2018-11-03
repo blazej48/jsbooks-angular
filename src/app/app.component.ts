@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import books from './book-list/books.json';
-import {Book} from '../models/Book';
+import {Book} from './models/Book';
 
 @Component({
   selector: 'app-root',

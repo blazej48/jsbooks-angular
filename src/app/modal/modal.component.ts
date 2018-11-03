@@ -1,4 +1,4 @@
-import {Component, ComponentRef, Injector, Input, ViewContainerRef} from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
   selector: 'app-modal',
@@ -7,7 +7,7 @@ import {Component, ComponentRef, Injector, Input, ViewContainerRef} from '@angul
 })
 export class ModalComponent {
 
-  @Input() imgSrc: string;
+  @Input() public imgSrc: string;
 
   constructor() {
   }

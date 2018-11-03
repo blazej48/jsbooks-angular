@@ -1,5 +1,5 @@
 import {Component, EventEmitter, HostListener, Input, OnInit, Output} from '@angular/core';
-import {Book} from '../../models/Book';
+import {Book} from '../models/Book';
 import {sortBy} from 'lodash';
 
 @Component({

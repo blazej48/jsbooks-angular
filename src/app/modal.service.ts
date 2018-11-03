@@ -1,4 +1,4 @@
-import {ApplicationRef, ComponentFactoryResolver, EmbeddedViewRef, Injectable, Injector} from '@angular/core';
+import {ApplicationRef, ComponentFactoryResolver, ComponentRef, EmbeddedViewRef, Injectable, Injector} from '@angular/core';
 import {ModalComponent} from './modal/modal.component';
 
 @Injectable({
@@ -13,9 +13,9 @@ export class ModalService {
   ) {
   }
 
-  private appendComponentToBody(component: any) {
-    const componentRef = this.componentFactoryResolver
-      .resolveComponentFactory(component)
+  openImg(url: string) {
+    const componentRef: ComponentRef<ModalComponent> = this.componentFactoryResolver
+      .resolveComponentFactory(ModalComponent)
       .create(this.injector);
 
     this.appRef.attachView(componentRef.hostView);
@@ -24,12 +24,8 @@ export class ModalService {
       .rootNodes[0] as HTMLElement;
 
     document.body.appendChild(domElem);
-    componentRef.instance.modalClicked = () => componentRef.destroy();
-    return componentRef.instance;
-  }
-
-  openImg(url: string) {
-    this.appendComponentToBody(ModalComponent).imgSrc = url;
+    (componentRef.instance as ModalComponent).modalClicked = () => componentRef.destroy();
+    componentRef.instance.imgSrc = url;
 
   }
 
